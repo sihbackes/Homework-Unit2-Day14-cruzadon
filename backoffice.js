@@ -24,7 +24,7 @@ window.onload = async () => {
     document.querySelector("#product-description").value = product.description;
     document.querySelector("#product-price").value = product.price;
     document.querySelector("#product-brand").value = product.brand;
-    document.querySelector("#product-image").value = product.urlImage;
+    document.querySelector("#product-image").value = product.imageUrl;
   }
 };
 

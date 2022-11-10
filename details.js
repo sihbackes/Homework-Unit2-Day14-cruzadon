@@ -20,11 +20,11 @@ function renderProduct(product) {
   const boxContent = document.querySelector("#product-details");
   console.log(boxContent);
   boxContent.innerHTML = `
+  <img src="${product.imageUrl}" class="card-img-top img-details" alt="${product.name}" />
   <h1 class="display-4">${product.name}</h1>
   <p>${product.description}</p>
-  <h3 class="mb-3">${product.price}€<h3>
+  <h3 class="mb-3">${product.price}£<h3>
   <h6 class="pl-2 py-3 bg-light">Server Details</h6>
-  <img src="${product.imageUrl}" class="card-img-top imagem" alt="${product.name}" />
   <ul class="list-group list-group-flush mb-4">
     <li class="list-group-item pl-2"><b>id: </b>${product._id}</li>
     <li class="list-group-item pl-2"><b>createdAt: </b>${product.createdAt}</li>
