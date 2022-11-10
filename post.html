@@ -11,10 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
+    <script src="post.js" defer></script>
     <title>Cruzadon</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html">Perfume Shop</a>
       <button
@@ -30,24 +31,70 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="post.html">Products Post</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="post.html"
+              >Products Post</a
+            >
           </li>
         </ul>
       </div>
     </nav>
     <div class="container">
-      <!-- PRODUCTS -->
-      <h3>Products</h3>
-      <div
-        id="box-content"
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"
-      ></div>
-    </div>
-
+      <!-- POST PRODUCTS -->
+      <div class="m-3">
+        <div class="row m-3">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control product-name"
+              placeholder="Product name"
+              aria-label="Product name"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control product-description"
+              placeholder="Description"
+              aria-label="Description"
+            />
+          </div>
+        </div>
+        <div class="row m-3">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control product-brand"
+              placeholder="Brand"
+              aria-label="Brand"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control product-price"
+              placeholder="Price"
+              aria-label="Price"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control product-image"
+              placeholder="URL image"
+              aria-label="URL image"
+            />
+          </div>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="btn btn-dark mx-auto post-btn">
+            Post New Product
+          </button>
+        </div>
+      </div>
     <!-- BOOTSTRAP SCRIPT -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
