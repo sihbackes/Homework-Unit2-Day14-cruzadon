@@ -27,11 +27,16 @@ async function displayProducts(productsList) {
      <div class="card mb-3 ">
        <img src="${item.imageUrl}" class="card-img-top imagem" alt="${item.name}" />
        <div class="card-body">
+       <h5 class="card-title truncate">${item.name}</h5>
          <h5 class="card-title truncate">${item.description}</h5>
          <h5 class="card-title truncate">${item.price}</h5>
+         <a class"col" href="details.html?productId=${item._id}">VIEW DETAILS</a>
        </div>
      </div>
     </div>`;
   });
 }
-getData();
+
+window.onload = async () => {
+  getData();
+};

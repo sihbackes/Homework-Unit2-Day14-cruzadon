@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume Shop</title>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="post.js" defer></script>
-    <title>Cruzadon</title>
+    <script src="backoffice.js"></script>
   </head>
+
   <body>
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html">Perfume Shop</a>
       <button
@@ -35,67 +35,48 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="post.html"
-              >Products Post</a
+            <a class="nav-link" href="backoffice.html"
+              >Backoffice <span class="sr-only">(current)</span></a
             >
           </li>
         </ul>
       </div>
     </nav>
+
     <div class="container">
-      <!-- POST PRODUCTS -->
-      <div class="m-3">
-        <div class="row m-3">
-          <div class="col">
-            <input
-              type="text"
-              class="form-control product-name"
-              placeholder="Product name"
-              aria-label="Product name"
-            />
-          </div>
-          <div class="col">
-            <input
-              type="text"
-              class="form-control product-description"
-              placeholder="Description"
-              aria-label="Description"
-            />
-          </div>
-        </div>
-        <div class="row m-3">
-          <div class="col">
-            <input
-              type="text"
-              class="form-control product-brand"
-              placeholder="Brand"
-              aria-label="Brand"
-            />
-          </div>
-          <div class="col">
-            <input
-              type="text"
-              class="form-control product-price"
-              placeholder="Price"
-              aria-label="Price"
-            />
-          </div>
-          <div class="col">
-            <input
-              type="text"
-              class="form-control product-image"
-              placeholder="URL image"
-              aria-label="URL image"
-            />
-          </div>
-        </div>
-        <div class="d-flex">
-          <button type="button" class="btn btn-dark mx-auto post-btn">
-            Post New Product
-          </button>
+      <div class="row justify-content-center">
+        <div class="col-md-6 mt-5">
+          <h1>Backoffice</h1>
+          <form onsubmit="addNewProduct(event)" id="product-form">
+            <div class="form-group">
+              <label for="product-name">Product Name</label>
+              <input type="text" class="form-control" id="product-name" />
+            </div>
+            <div class="form-group">
+              <label for="product-description">Product Description</label>
+              <input type="text" class="form-control" id="product-description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="product-price">Product Price</label>
+              <input type="number" class="form-control" id="product-price" />
+            </div>
+            <div class="form-group">
+              <label for="product-brand">Product Brand</label>
+              <input type="text" class="form-control" id="product-brand" />
+            </div>
+            <div class="form-group">
+              <label for="product-image">URL image</label>
+              <input type="text" class="form-control" id="product-image" />
+            </div>
+
+            <button id="post-btn" type="submit" class="btn btn-primary">
+              Post Product
+            </button>
+          </form>
         </div>
       </div>
-    <!-- BOOTSTRAP SCRIPT -->
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
